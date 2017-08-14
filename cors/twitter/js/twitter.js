@@ -18,10 +18,6 @@ function handleData(data) {
     tweets.textContent = data.tweets;
     followers.textContent = data.followers;
     following.textContent = data.following;
-    wallpaper.src = chkUrl(data.wallpaper);
-    pic.src = chkUrl(data.pic);
-}
-
-function chkUrl(url) {
-	return url.replace(/:\d+/g ,'');
+    wallpaper.src = data.wallpaper;
+    pic.src = data.pic;
 }
